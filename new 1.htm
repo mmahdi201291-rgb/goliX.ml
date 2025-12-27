@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>سونیک؛ تاریخچه، بازی‌ها، فیلم‌ها و همه چیز</title>
+  <meta name="description" content="یک وب‌سایت جامع و پرمحتوا درباره سونیک: تاریخچه ساخت، تکامل سری، معرفی شخصیت‌ها، فهرست بازی‌ها و فیلم‌ها، رکوردها و نکته‌ها با توضیحات کامل." />
+  <meta name="keywords" content="سونیک, سگا, بازی‌های سونیک, فیلم‌های سونیک, تاریخچه سونیک, شخصیت‌های سونیک, Sonic the Hedgehog" />
+  <meta name="author" content="علاقه‌مندان سونیک" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="سونیک؛ تاریخچه، بازی‌ها، فیلم‌ها و همه چیز" />
+  <meta property="og:description" content="راهنمای جامع سونیک با تمرکز بر بازی‌ها، فیلم‌ها، شخصیت‌ها و نکته‌های جالب." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fa_IR" />
+  <meta property="og:image" content="https://example.com/sonic-cover.jpg" />
+  <style>
+    /* ریست مختصر */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Vazirmatn", "IRANSans", "Tahoma", sans-serif;
+      background: #0a0f1e;
+      color: #e9ecf1;
+      line-height: 1.8;
+    }
+
+    /* رنگ‌های برندگونه سونیک */
+    :root {
+      --blue: #0d47a1;
+      --blue-dark: #072a66;
+      --yellow: #ffd400;
+      --red: #e53935;
+      --white: #ffffff;
+      --gray: #99a3b3;
+      --card: #121a2c;
+      --border: #1f2a44;
+      --accent: #00b4ff;
+    }
+
+    /* هدر و ناوبری */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: linear-gradient(90deg, var(--blue-dark), #091739);
+      border-bottom: 1px solid var(--border);
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.5px;
+    }
+    .brand .logo {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #3ec0ff, var(--accent));
+      box-shadow: 0 0 12px rgba(0, 180, 255, 0.7);
+    }
+    .menu {
+      display: flex;
+      gap: 18px;
+    }
+    .menu a {
+      color: #dbe8ff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: 0.2s ease;
+    }
+    .menu a:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--white);
+    }
+
+    /* قهرمان صفحه */
+    .hero {
+      background: linear-gradient(180deg, #07112a 0%, #0a0f1e 100%);
+      padding: 50px 0 30px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 30px;
+      margin: 0 0 12px;
+      color: #eef5ff;
+    }
+    .hero p {
+      color: #c9d6ea;
+      margin: 0 0 16px;
+    }
+    .hero .cta {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      transition: 0.2s ease;
+    }
+    .btn.primary { background: var(--accent); color: #021026; }
+    .btn.secondary { background: #12213f; color: #dbe8ff; }
+    .btn:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .hero .art {
+      min-height: 220px;
+      border-radius: 16px;
+      background:
+        radial-gradient(130px 130px at 80% 20%, rgba(0, 180, 255, 0.25), transparent 60%),
+        radial-gradient(200px 200px at 20% 80%, rgba(255, 212, 0, 0.18), transparent 65%),
+        linear-gradient(135deg, #081532, #0a0f1e);
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+      display: grid; place-items: center; color: #bfe7ff;
+      text-align: center; padding: 20px;
+    }
+
+    /* بخش‌ها */
+    section { padding: 40px 0; border-bottom: 1px solid var(--border); }
+    section h2 {
+      font-size: 22px;
+      margin: 0 0 18px;
+      color: #e9f2ff;
+    }
+    section p { color: #cbd5e7; }
+
+    /* کارت‌ها و شبکه‌ها */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #eaf2ff;
+    }
+    .meta { color: var(--gray); font-size: 13px; margin-bottom: 8px; }
+    .badge {
+      display: inline-block;
+      background: #132449;
+      color: #bfe1ff;
+      border: 1px solid #1e3570;
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin: 0 6px 8px 0;
+    }
+
+    /* جدول‌ها */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card);
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      color: #eaf2ff;
+    }
+    th {
+      background: #0e1a33;
+      text-align: right;
+      font-weight: 800;
+    }
+    tbody tr:nth-child(odd) td { background: #10192c; }
+    tbody tr:hover td { background: #13213a; }
+
+    /* نقل‌قول */
+    blockquote {
+      background: #0f1a33;
+      border-right: 4px solid var(--accent);
+      padding: 12px 14px;
+      margin: 16px 0;
+      color: #d6e7ff;
+      border-radius: 10px;
+    }
+
+    /* فهرست‌ها */
+    ul, ol { padding-right: 18px; }
+    li { margin-bottom: 6px; }
+    strong { color: #f2f6ff; }
+
+    /* گالری */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .thumb {
+      aspect-ratio: 1/1;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0b1730, #0f1b36);
+      border: 1px solid var(--border);
+      box-shadow: inset 0 0 30px rgba(0, 180, 255, 0.18);
+      display: grid; place-items: center;
+      color: #a7d8ff;
+      font-size: 13px;
+    }
+
+    /* فرم بازخورد */
+    .form {
+      display: grid; gap: 10px;
+      max-width: 780px;
+    }
+    .form label { font-weight: 700; color: #eaf2ff; }
+    .input, textarea {
+      background: #0d162c;
+      border: 1px solid var(--border);
+      color: #eaf2ff;
+      padding: 10px 12px;
+      border-radius: 10px;
+      outline: none;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    .form .row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    }
+
+    /* پاورقی */
+    footer {
+      background: #08132a;
+      color: #c7d4ea;
+      padding: 22px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    /* واکنش‌گرا */
+    @media (max-width: 900px) {
+      .hero-grid, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- هدر و ناوبری -->
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <span>سونیک سنتر</span>
+        </div>
+        <div class="menu" aria-label="Main navigation">
+          <a href="#intro">معرفی</a>
+          <a href="#history">تاریخچه</a>
+          <a href="#games">بازی‌ها</a>
+          <a href="#films">فیلم‌ها</a>
+          <a href="#characters">شخصیت‌ها</a>
+          <a href="#facts">نکته‌ها</a>
+          <a href="#gallery">گالری</a>
+          <a href="#contact">بازخورد</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- قهرمان صفحه -->
+  <section class="hero" id="intro">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <h1>سونیک: جوجه‌تیغی سریع‌السیر؛ راهنمای کامل جهان آبی</h1>
+          <p>
+            اگر سرعت، هیجان و پلتفرمینگ کلاسیک شما را به وجد می‌آورد، این‌جا خانه‌ی شماست. در این وب‌سایت
+            هرآنچه درباره سونیک می‌خواهید—از ریشه‌های سگا تا بازی‌های سه‌بعدی مدرن، فیلم‌های پرفروش، شخصیت‌های محبوب
+            و نکته‌های جالب—با توضیحات کامل گردآوری شده است.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#games">مشاهده فهرست بازی‌ها</a>
+            <a class="btn secondary" href="#films">مرور فیلم‌ها</a>
+          </div>
+        </div>
+        <div class="art">
+          <div>
+            <h3>جهان سونیک در یک نگاه</h3>
+            <p>اکشن سرعتی، رفاقت‌های فراموش‌نشدنی، و رقابت همیشگی با دکتر اگمن!</p>
+            <span class="badge">سگا</span>
+            <span class="badge">پلتفرمر</span>
+            <span class="badge">اکشن</span>
+            <span class="badge">ماجراجویی</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تاریخچه -->
+  <section id="history">
+    <div class="container">
+      <h2>تاریخچه سونیک و شکل‌گیری نماد سرعت</h2>
+      <p>
+        سونیک نخستین‌بار اوایل دهه ۹۰ میلادی به‌عنوان پاسخ سگا به محبوبیت شخصیت‌های نینتندو خلق شد. هدف، ساخت
+        قهرمانی بود که سرعت، جسارت و طراحی چشم‌نواز را یک‌جا داشته باشد؛ نتیجه‌اش جوجه‌تیغی آبی‌رنگی شد که به‌سرعت
+        تبدیل به نماد کنسول جنسیس/مگادرایو شد.
+      </p>
+      <blockquote>
+        «سونیک فقط سریع نیست؛ فلسفه‌اش این است که لحظه را با تمام وجود زندگی کنی و جلوتر از مانع، آینده را ببینی.»
+      </blockquote>
+      <p>
+        با موفقیت نسخه‌های ۲بعدی، سری وارد عصر سه‌بعدی شد و بازی‌هایی مانند Adventure و Generations نشان دادند
+        چگونه می‌توان گذشته و آینده را پیوند زد. در کنار بازی‌ها، کمیک‌ها، انیمیشن‌ها و فیلم‌های سینمایی گستره
+        مخاطبان را افزایش دادند و سونیک را به یک پدیده چندرسانه‌ای بدل کردند.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>ریشه‌ها و طراحی</h3>
+          <p class="meta">دهه ۹۰ / جنسیس</p>
+          <p>ترکیب خطوط نرم، رنگ آبی و کفش‌های قرمز الهام‌گرفته از فرهنگ پاپ، سونیک را فوراً قابل تشخیص کرد.</p>
+        </div>
+        <div class="card">
+          <h3>گذار به سه‌بعدی</h3>
+          <p class="meta">دریم‌کست / Adventure</p>
+          <p>با دنیای بازتر، روایت چندشخصیتی و گیم‌پلی متنوع، سری وارد قلمرو تازه‌ای از طراحی شد.</p>
+        </div>
+        <div class="card">
+          <h3>چندرسانه‌ای</h3>
+          <p class="meta">انیمیشن‌ها و فیلم‌ها</p>
+          <p>از سریال‌های تلویزیونی تا فیلم‌های سینمایی، سونیک توانست فراتر از کنسول‌ها اثر بگذارد.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- بازی‌ها -->
+  <section id="games">
+    <div class="container">
+      <h2>فهرست بازی‌های مهم سونیک با توضیحات کامل</h2>
+      <p>
+        در این بخش، از کلاسیک‌های ۲بعدی تا نسخه‌های سه‌بعدی مدرن را مرور می‌کنیم؛ هرکدام با تمرکز بر نوآوری‌ها،
+        نقاط قوت، و اینکه چرا هنوز ارزش تجربه‌کردن دارند.
+      </p>
+
+      <div class="card">
+        <h3>دسته‌بندی کلی بازی‌ها</h3>
+        <ul>
+          <li><strong>کلاسیک ۲بعدی:</strong> تمرکز بر سرعت خطی، حلقه‌ها و مسیرهای چندشاخه با طراحی سطح دست‌ساز.</li>
+          <li><strong>سه‌بعدی ماجراجویی:</strong> روایت گسترده‌تر، حرکت آزاد، و مکانیک‌های متنوع مانند شهرهای قابل گشت‌وگذار.</li>
+          <li><strong>هایبریـد مدرن:</strong> ترکیب نمایه دوستی و سه‌بعدی، چالش تایم‌اَتک و طراحی مدرن مراحل.</li>
+          <li><strong>اسپین‌آف‌ها:</strong> مسابقه‌ای، مبارزه‌ای، و همکاری‌های کراس‌اوور با فرنچایزهای دیگر.</li>
+        </ul>
+      </div>
+
+      <table aria-label="فهرست بازی‌های منتخب سونیک">
+        <thead>
+          <tr>
+            <th>نام بازی</th>
+            <th>سال انتشار</th>
+            <th>پلتفرم‌های شاخص</th>
+            <th>نکته کلیدی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>سوزن‌دار آبی ۱ (Sonic the Hedgehog)</td>
+            <td>۱۹۹۱</td>
+            <td>جنسیس/مگادرایو</td>
+            <td>معرفی سرعت به‌عنوان هسته گیم‌پلی و مرحله Green Hill Zone.</td>
+          </tr>
+          <tr>
+            <td>سونیک ۲</td>
+            <td>۱۹۹۲</td>
+            <td>جنسیس/مگادرایو</td>
+            <td>اضافه‌شدن Tails و حالت دو نفره؛ بهبود چشمگیر طراحی مراحل.</td>
+          </tr>
+          <tr>
+            <td>سونیک ۳ و Knuckles</td>
+            <td>۱۹۹۴</td>
+            <td>جنسیس/مگادرایو</td>
+            <td>پیوستگی داستانی، ذخیره‌سازی پیشرفت، و مراحل عظیم.</td>
+          </tr>
+          <tr>
+            <td>سونیک Adventure</td>
+            <td>۱۹۹۸</td>
+            <td>دریم‌کست</td>
+            <td>روایت چند دیدگاهی، شهر مرکزی، و جهش بزرگ به سه‌بعدی.</td>
+          </tr>
+          <tr>
+            <td>سونیک Adventure 2</td>
+            <td>۲۰۰۱</td>
+            <td>دریم‌کست، گیم‌کیوب</td>
+            <td>معرفی Shadow و طراحی مرحله‌های سرعتی نمادین.</td>
+          </tr>
+          <tr>
+            <td>سونیک Generations</td>
+            <td>۲۰۱۱</td>
+            <td>PC، PS3، Xbox 360</td>
+            <td>ادغام سبک کلاسیک و مدرن؛ بازسازی مناطق محبوب.</td>
+          </tr>
+          <tr>
+            <td>سونیک Mania</td>
+            <td>۲۰۱۷</td>
+            <td>PC، PS4، Xbox One، Switch</td>
+            <td>بازگشت به ۲بعدی با طراحی عاشقانه توسط طرفداران-توسعه‌دهندگان.</td>
+          </tr>
+          <tr>
+            <td>سونیک Frontiers</td>
+            <td>۲۰۲۲</td>
+            <td>PC، PS5/PS4، Xbox، Switch</td>
+            <td>جهان نیمه‌گشوده با تمرکز بر اکتشاف و مبارزه.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="grid-2" style="margin-top:16px">
+        <div class="card">
+          <h3>چرا کلاسیک‌ها هنوز جذاب‌اند؟</h3>
+          <p>
+            پاسخ کوتاه: «طراحی سطح». مسیرهای چندشاخه، سرعت کنترل‌شده، و جایزه‌دادن به یادگیری از اشتباهات، تجربه‌ای
+            می‌سازند که در هر بار بازی، چیزی تازه برای کشف دارد.
+          </p>
+        </div>
+        <div class="card">
+          <h3>مزیت دوران مدرن</h3>
+          <p>
+            تنوع مکانیک‌ها، چالش‌های زمانی، و ترکیب نمایه‌ها به بازیکنان آزادی می‌دهد تا سبک دلخواه خود را پیدا کنند—
+            بدون از دست دادن حس «شتاب».
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- فیلم‌ها -->
+  <section id="films">
+    <div class="container">
+      <h2>فیلم‌ها و اقتباس‌های سینمایی سونیک</h2>
+      <p>
+        اقتباس‌های سونیک از انیمیشن‌های تلویزیونی تا فیلم‌های سینمایی لایواکشن حرکت کرده‌اند. در فیلم‌های اخیر،
+        ترکیب جلوه‌های ویژه با شوخ‌طبعی خانواده‌پسند، مخاطبان تازه‌ای را وارد جهان سونیک کرده است.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>فیلم Sonic (۲۰۲۰)</h3>
+          <span class="badge">لایواکشن</span>
+          <span class="badge">ماجراجویی خانوادگی</span>
+          <p class="meta">کاراکتر محوری: سونیک، دکتر اگمن</p>
+          <p>
+            شروعی موفق برای حضور سونیک روی پرده نقره‌ای؛ تمرکز بر رابطه‌های دوستانه و تلاش برای یافتن «خانه».
+          </p>
+        </div>
+        <div class="card">
+          <h3>Sonic the Hedgehog 2 (۲۰۲۲)</h3>
+          <span class="badge">اکشن بیشتر</span>
+          <span class="badge">شخصیت‌های محبوب</span>
+          <p class="meta">اضافه‌شدن: Tails و Knuckles</p>
+          <p>
+            گسترش جهان داستانی و تعادل بهتر میان اکشن، کمدی و ارجاعات طرفداری.
+          </p>
+        </div>
+        <div class="card">
+          <h3>نگاه به آینده</h3>
+          <span class="badge">ادامه‌ها</span>
+          <span class="badge">اسپین‌آف‌ها</span>
+          <p class="meta">رایانش ابری و جلوه‌های پیشرفته</p>
+          <p>
+            با استقبال مخاطبان، مسیر برای دنباله‌ها و پروژه‌های فرعی باز است؛ تمرکز بر شخصیت‌های جدید و گسترش
+            افسانه‌شناسی جهان سونیک.
+          </p>
+        </div>
+      </div>
+
+      <blockquote>
+        «فیلم‌های سونیک نه‌فقط برای طرفداران قدیمی، که برای نسل جدید هم پلی می‌سازند تا با ریشه‌ها آشنا شوند.»
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- شخصیت‌ها -->
+  <section id="characters">
+    <div class="container">
+      <h2>معرفی شخصیت‌های کلیدی جهان سونیک</h2>
+      <p>
+        شخصیت‌ها قلب تپنده این فرنچایز هستند: هرکدام انگیزه، مهارت و دیزاین منحصر‌به‌فردی دارند که روایت را پیش می‌برد.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>سونیک</h3>
+          <p class="meta">جوجه‌تیغی آبی | سرعت خارق‌العاده</p>
+          <p>بی‌پروا، خوش‌قلب و وفادار؛ با توانایی رول‌زدن و شکست موانع در یک چشم‌به‌هم‌زدن.</p>
+        </div>
+        <div class="card">
+          <h3>Tails</h3>
+          <p class="meta">روباه دو‌دم | نابغه فنی</p>
+          <p>دوست صمیمی سونیک؛ پرواز با دم‌ها، اختراع گجت‌ها و پشتیبانی تیمی بی‌نظیر.</p>
+        </div>
+        <div class="card">
+          <h3>Knuckles</h3>
+          <p class="meta">اکیدنا | قدرت و شرافت</p>
+          <p>نگهبان Master Emerald؛ ترکیبی از قدرت خام و روحیه‌ی قبیله‌ای.</p>
+        </div>
+        <div class="card">
+          <h3>Amy Rose</h3>
+          <p class="meta">چکش پیکوپیکو | اراده قوی</p>
+          <p>پرشور و قاطع؛ در مبارزات نزدیک مؤثر و در روایت، انرژی‌بخش گروه.</p>
+        </div>
+        <div class="card">
+          <h3>Shadow</h3>
+          <p class="meta">جوجه‌تیغی آلتیمیت | هرج‌ومرج کنترل‌شده</p>
+          <p>تضادِ تاریکِ سونیک؛ پیچیده، مصمم و پرسش‌گر عدالت شخصی.</p>
+        </div>
+        <div class="card">
+          <h3>دکتر اگمن</h3>
+          <p class="meta">نابغه شرور | ارتش رباتیک</p>
+          <p>دشمن دیرینه با رویاهای سلطه‌ی جهانی؛ موتور روایتِ چالش و رقابت.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- نکته‌ها و رکوردها -->
+  <section id="facts">
+    <div class="container">
+      <h2>نکته‌های جالب، رکوردها و پشت‌صحنه</h2>
+      <ul>
+        <li>
+          <strong>الهام از فرهنگ پاپ:</strong>
+          طراحی کفش‌های قرمز و سرعتِ سرسام‌آور، ارجاعی به نمادهای موسیقی و مد دهه ۹۰ تلقی می‌شود.
+        </li>
+        <li>
+          <strong>سطوح چندمسیره:</strong>
+          مسیرهای بالا-پایین باعث می‌شود بازیکن‌های ماهر، زمان‌های بهتری ثبت کنند و پاداش کشف بگیرند.
+        </li>
+        <li>
+          <strong>موسیقی به‌یادماندنی:</strong>
+          از ملودی‌های چیپ‌تیون کلاسیک تا ارکستراسیون مدرن، موسیقی سونیک جزء هویت سری است.
+        </li>
+        <li>
+          <strong>جامعه طرفداران:</strong>
+          مدها، ریمیکس‌ها و ویکی‌ها نقش مهمی در زنده نگه‌داشتن محتوا و دانش تاریخی دارند.
+        </li>
+        <li>
+          <strong>تعادل سرعت و کنترل:</strong>
+          مهارت در حفظ مومنتوم و پرهیز از موانع، کلید تجربه‌ی «جریان» در بازی‌های سونیک است.
+        </li>
+      </ul>
+
+      <div class="grid-2" style="margin-top: 10px;">
+        <div class="card">
+          <h3>راهنمای شروع برای تازه‌کارها</h3>
+          <ol>
+            <li><strong>انتخاب نسخه:</strong> با Mania یا Generations شروع کنید تا مزه‌ی کلاسیک و مدرن را با هم بچشید.</li>
+            <li><strong>یادگیری کنترل:</strong> از عجله بی‌جا پرهیز کنید؛ مومنتوم را حفظ و مسیر امن را بیابید.</li>
+            <li><strong>تمرین تایم‌اَتک:</strong> زمان‌گیری مراحل به شما راه‌های میان‌بر را یاد می‌دهد.</li>
+            <li><strong>کشف مسیرها:</strong> هر منطقه چند مسیر دارد؛ کنجکاوی را به عادت تبدیل کنید.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>تحلیل طراحی مرحله</h3>
+          <p>
+            هسته‌ی طراحی مراحل سونیک بر پاداش‌دادن به مهارت و مسیرهای موازی است؛ خطر را افزایش می‌دهید تا سرعت
+            و امتیاز بیشتر بگیرید. این فلسفه، هر دوربین و مکانیک را به خدمت «جریان» درمی‌آورد.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- گالری -->
+  <section id="gallery">
+    <div class="container">
+      <h2>گالری تصاویر و یادبود لحظه‌های نمادین</h2>
+      <p>در نبود تصاویر واقعی، این جایگاه‌ها را با اسکرین‌شات‌ها و هنر طرفداری دلخواه خود پر کنید.</p>
+      <div class="gallery">
+        <div class="thumb">Green Hill Zone</div>
+        <div class="thumb">Chemical Plant Zone</div>
+        <div class="thumb">City Escape</div>
+        <div class="thumb">Sky Sanctuary</div>
+        <div class="thumb">Studiopolis</div>
+        <div class="thumb">Angel Island</div>
+        <div class="thumb">Starfall Islands</div>
+        <div class="thumb">Final Egg</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- جدول زمانی -->
+  <section id="timeline">
+    <div class="container">
+      <h2>جدول زمانی تکامل سونیک</h2>
+      <table aria-label="جدول زمانی سونیک">
+        <thead>
+          <tr>
+            <th>دوره</th>
+            <th>ویژگی‌ها</th>
+            <th>رخدادهای مهم</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>کلاسیک (اوایل ۹۰)</td>
+            <td>۲بعدی، سرعت خطی، موسیقی چیپ‌تیون</td>
+            <td>معرفی هویت بصری و مکانیک‌های حلقه و اسپرینگ</td>
+          </tr>
+          <tr>
+            <td>سه‌بعدی اولیه (اواخر ۹۰)</td>
+            <td>کاوش شهری، روایت چندگانه</td>
+            <td>Adventure و عبور از محدودیت‌های سخت‌افزاری</td>
+          </tr>
+          <tr>
+            <td>دوران تلفیق (۲۰۱۰ به بعد)</td>
+            <td>ترکیب کلاسیک و مدرن، چالش‌های زمانی</td>
+            <td>Generations، Mania و بازخوانی مناطق محبوب</td>
+          </tr>
+          <tr>
+            <td>افق‌های باز (دهه ۲۰۲۰)</td>
+            <td>جهان نیمه‌گشوده، مبارزات پیشرفته</td>
+            <td>Frontiers و تأکید بر اکتشاف آزاد</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- پرسش‌های پرتکرار -->
+  <section id="faq">
+    <div class="container">
+      <h2>پرسش‌های پرتکرار درباره سونیک</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>آیا باید از قدیمی‌ها شروع کرد؟</h3>
+          <p>ضروری نیست، اما تجربه‌ی نسخه‌های کلاسیک کمک می‌کند فلسفه سرعت و مومنتوم را بهتر درک کنید.</p>
+        </div>
+        <div class="card">
+          <h3>بهترین ورود برای نسل جدید چیست؟</h3>
+          <p>Mania برای ۲بعدی و Generations برای ترکیبی؛ هر دو وفادار و در عین حال مدرن هستند.</p>
+        </div>
+        <div class="card">
+          <h3>آیا فیلم‌ها برای طرفداران قدیمی مناسب‌اند؟</h3>
+          <p>بله، با ارجاعات فراوان؛ درعین‌حال برای خانواده‌ها و مخاطبان تازه هم سرگرم‌کننده‌اند.</p>
+        </div>
+        <div class="card">
+          <h3>چرا موسیقی سونیک مهم است؟</h3>
+          <p>هویت سرعتی بازی را تقویت می‌کند و حس حرکت مداوم را به گوش منتقل می‌سازد.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تماس و بازخورد -->
+  <section id="contact">
+    <div class="container">
+      <h2>ارسال بازخورد و مشارکت در توسعه محتوا</h2>
+      <p>
+        اگر نکته‌ای برای تکمیل این راهنما دارید—از تصحیح تاریخ‌ها تا اضافه‌کردن بازی‌های کمترشناخته—همین‌جا بنویسید.
+        هدف ما ساختن منبعی زنده و دقیق برای تمامی علاقه‌مندان سونیک است.
+      </p>
+      <form class="form" onsubmit="event.preventDefault(); alert('سپاس! پیام شما ثبت شد.');">
+        <div class="row">
+          <div>
+            <label for="name">نام</label>
+            <input id="name" class="input" type="text" placeholder="نام شما" />
+          </div>
+          <div>
+            <label for="email">ایمیل</label>
+            <input id="email" class="input" type="email" placeholder="example@mail.com" />
+          </div>
+        </div>
+        <div>
+          <label for="subject">موضوع</label>
+          <input id="subject" class="input" type="text" placeholder="مثلاً: پیشنهاد افزودن Sonic Colors" />
+        </div>
+        <div>
+          <label for="message">پیام شما</label>
+          <textarea id="message" placeholder="هرچه در ذهن دارید با ما در میان بگذارید..."></textarea>
+        </div>
+        <button class="btn primary" type="submit">ارسال بازخورد</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- پاورقی -->
+  <footer>
+    <div class="container">
+      <p>© ۲۰۲۵ سونیک سنتر — ساخته‌شده با عشق توسط طرفداران. تمامی نام‌ها و علائم تجاری متعلق به صاحبان آن‌هاست.</p>
+      <p>برای بهترین تجربه، محتوای گالری را با تصاویر واقعی و اسکرین‌شات‌های باکیفیت تکمیل کنید.</p>
+    </div>
+  </footer>
+
+  <!-- اسکریپت‌های سبک و کاربردی -->
+  <script>
+    // اسکرول نرم به بخش‌ها با هایلایت گزینه فعال
+    const links = document.querySelectorAll('.menu a');
+    const sections = [...links].map(a => document.querySelector(a.getAttribute('href')));
+    const highlight = () => {
+      let idx = 0;
+      sections.forEach((sec, i) => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= 120 && rect.bottom >= 120) idx = i;
+      });
+      links.forEach(l => l.classList.remove('active'));
+      links[idx]?.classList.add('active');
+    };
+    window.addEventListener('scroll', highlight);
+    window.addEventListener('load', highlight);
+
+    // تغییر عنوان صفحه بر اساس بخش فعال (اختیاری)
+    const titleMap = {
+      '#intro': 'سونیک؛ معرفی جامع',
+      '#history': 'تاریخچه سونیک',
+      '#games': 'بازی‌های سونیک',
+      '#films': 'فیلم‌ها و اقتباس‌ها',
+      '#characters': 'شخصیت‌های کلیدی',
+      '#facts': 'نکته‌ها و رکوردها',
+      '#gallery': 'گالری سونیک',
+      '#timeline': 'جدول زمانی سونیک',
+      '#faq': 'پرسش‌های پرتکرار',
+      '#contact': 'بازخورد شما'
+    };
+    const updateTitle = () => {
+      const active = document.querySelector('.menu a.active');
+      if (active) document.title = (titleMap[active.getAttribute('href')] || 'سونیک؛ راهنمای کامل');
+    };
+    window.addEventListener('scroll', updateTitle);
+    window.addEventListener('load', updateTitle);
+  </script>
+</body>
+</html>
